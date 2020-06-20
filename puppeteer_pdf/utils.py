@@ -73,6 +73,7 @@ def puppeteer_to_pdf(input, output=None, **kwargs):
         options = {'path': output}
     else:
         options = copy(options)
+        options['path'] = output
     options.update(kwargs)
 
     cmd = 'PUPPETEER_PDF_CMD'
